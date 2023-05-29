@@ -1,14 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
 import { Crud, CrudController } from '@nestjsx/crud';
-import { User } from './user.entity';
-import { UsersService } from './users.service';
+import { User } from './tasks.entity';
+import { UsersService } from './tasks.service';
 
 @Crud({
     model: { 
         type: User
 }
 })
-@Controller('users')
+@Controller('Tasks')
 export class UsersController implements CrudController<User> {
    constructor(public service: UsersService) {}
 }
